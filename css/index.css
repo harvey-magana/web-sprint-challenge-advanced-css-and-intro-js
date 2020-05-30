@@ -143,9 +143,7 @@ nav span {
   flex-wrap: wrap;
   justify-content: center;
 }
-.title-container h1,
-.title-container .bio {
-  font-family: 'Raleway', sans-serif;
+.title-container h1 {
   text-align: center;
   margin: 4%;
 }
@@ -187,10 +185,14 @@ nav span {
   width: 80%;
   margin: 0 auto;
 }
-.artist {
+.artists-container .artist {
   width: 40%;
   text-align: center;
 }
-.artist img {
+.artists-container .artist img {
   width: 100%;
+}
+.artists-container .artist .bio {
+  text-align: center;
+  margin: 4%;
 }
