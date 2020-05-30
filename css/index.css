@@ -126,6 +126,11 @@ header {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  header {
+    padding: 3rem;
+  }
+}
 nav {
   width: 30%;
   display: flex;
