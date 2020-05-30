@@ -5,6 +5,9 @@
 
     h1 {	
         .font-format();
+        @media @mobile {
+            font-size: 3rem;
+        }
     }
 
     & div {	
@@ -18,6 +21,11 @@
         align-items: center;
         height:60vh;
         margin:5% 0;
+        @media @mobile {
+            background-size: cover;
+            width: 90%;
+            height: 50vh;
+        }
     }
     & div:hover {	
         opacity: 80%;	
