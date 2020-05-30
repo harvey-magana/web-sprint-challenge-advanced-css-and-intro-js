@@ -220,6 +220,24 @@ nav span {
     height: auto;
   }
 }
+.artists-container .artist .name {
+  text-align: center;
+  margin: 4%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .name {
+    font-size: 2rem;
+  }
+}
+.artists-container .artist p {
+  text-align: center;
+  margin: 4%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist p {
+    font-size: 1.5rem;
+  }
+}
 .artists-container .artist .bio {
   text-align: center;
   margin: 4%;
