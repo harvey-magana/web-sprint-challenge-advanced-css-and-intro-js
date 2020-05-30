@@ -259,12 +259,17 @@ console.log(get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(arr, value) {
+  for(let i = 0; i < arr.length; i++) {
+      if(arr[i].id === value) {
+          arr.splice(i, 1)
+      }
   }
-  
-  /**
+    return arr.length;
+}
 
+console.log(removeArtist(artists, 5))
+  /**
 
 
 
@@ -280,11 +285,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(arr){
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+      obj.id = arr.shift([i]);
+      obj.name = arr.shift([i]);
+      obj.years = arr.shift([i]);
+      obj.genre = arr.shift([i]);
+      obj.nationality = arr.shift([i]);
+      obj.bio = arr.shift([i]);
   }
+  artists.push(obj)
+return artists;
+}
+
+console.log(addArtist([21, "Cookie Monster", "1969 - present", "Cookies", "Monster", "Born on Sesame Street, Cookie Monster was best known for his antics on this famous television show, but since retiring has created many great works of art that moved society forward with this provocative pieces."]))
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -294,13 +309,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(arr){
+  let paintings = [];
+for(let i = 0; i < arr.length; i++) {
+    if(arr[i].paintings > 100) {
+        paintings.push(arr[i].name)
+    }
+}
+  return paintings;
 }
 
-
+console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
