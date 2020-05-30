@@ -175,9 +175,9 @@ nav span {
 }
 .title-container button:hover {
   background-color: #626262;
-  border: 2px solid white;
-  color: white;
-  box-shadow: 2px 2px 1px white;
+  border: 2px solid #fff;
+  color: #fff;
+  box-shadow: 2px 2px 1px #fff;
 }
 .artists-container {
   display: flex;
