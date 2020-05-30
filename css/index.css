@@ -214,7 +214,23 @@ nav span {
 .artists-container .artist img {
   width: 100%;
 }
+@media (max-width: 500px) {
+  .artists-container .artist img {
+    width: 80%;
+    height: auto;
+  }
+}
 .artists-container .artist .bio {
   text-align: center;
   margin: 4%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .artists-container {
+    flex-direction: column;
+  }
 }

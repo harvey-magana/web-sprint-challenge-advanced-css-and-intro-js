@@ -10,11 +10,21 @@
 
         & img{
             width:100%;
+            @media @mobile {
+                width: 80%;
+                height: auto;
+            }
         }
 
         & .bio {	
             .font-format()
         }	
+        @media @mobile {
+            width: 100%;
+        }
     }
 
+    @media @mobile {
+        flex-direction: column;
+    }
 }
