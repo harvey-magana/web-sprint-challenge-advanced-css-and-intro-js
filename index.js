@@ -213,7 +213,8 @@ console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+artists.splice(0, artists[8].name = "Vincent van Gogh")
+console.log(artists[8])
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -223,6 +224,7 @@ console.log(artists[2].bio)
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
+
 function getArtistByIndex(arr, index) {
   for(let i = 0; i < arr.length; i++) {
       if(arr[i].id === index) {
@@ -259,6 +261,7 @@ console.log(get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
+
 function removeArtist(arr, value) {
   for(let i = 0; i < arr.length; i++) {
       if(arr[i].id === value) {
@@ -285,6 +288,7 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
+
 function addArtist(arr){
   let obj = {};
   for (let i = 0; i < arr.length; i++) {
@@ -308,6 +312,7 @@ console.log(addArtist([21, "Cookie Monster", "1969 - present", "Cookies", "Monst
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
+
 
 function lotsOfArt(arr){
   let paintings = [];
