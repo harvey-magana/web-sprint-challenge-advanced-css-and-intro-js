@@ -208,11 +208,13 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
+console.log("%cTask 1:", "color: green");
 console.log(artists[0].name);
 console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+console.log("%cTask 2:", "color: green");
 artists.splice(0, artists[8].name = "Vincent van Gogh")
 console.log(artists[8])
 
@@ -232,7 +234,8 @@ function getArtistByIndex(arr, index) {
       }
   }
 }
-  
+
+console.log("%cTask 3:", "color: green");
 console.log(getArtistByIndex(artists, 5));
   /**
 
@@ -249,6 +252,7 @@ function get20s(artists) {
    return artist;
 }
 
+console.log("%cTask 4:", "color: green");
 console.log(get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -271,6 +275,7 @@ function removeArtist(arr, value) {
     return arr.length;
 }
 
+console.log("%cTask 5:", "color: green");
 console.log(removeArtist(artists, 5))
   /**
 
@@ -303,7 +308,8 @@ function addArtist(arr){
 return artists;
 }
 
-console.log(addArtist([21, "Cookie Monster", "1969 - present", "Cookies", "Monster", "Born on Sesame Street, Cookie Monster was best known for his antics on this famous television show, but since retiring has created many great works of art that moved society forward with this provocative pieces."]))
+console.log("%cTask 6:", "color: green");
+console.log(addArtist([21, "Cookie Monster", "1969 - present", "Cookies", "Monster", "Born on Sesame Street, Cookie Monster was best known for his antics on the famous television show Sesame Street, but since retiring has created many great works of art that moved society forward with this provocative pieces... of cookies that is..."]))
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -324,6 +330,7 @@ for(let i = 0; i < arr.length; i++) {
   return paintings;
 }
 
+console.log("%cTask 7:", "color: green");
 console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
@@ -349,12 +356,51 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+function getHTML(data){
 
-    /* Code here */
 
+  console(w + "\n" + name + "\n" + bio) ;
+}
+
+
+function getHTML (data) { 
+
+  var imgElem = document.createElement("img");
+  var imageDiv = document.createElement("div")
+  var nameAnchorTag = document.createElement("a");
+  var nameDiv = document.createElement("div")
+  var bioDiv = document.createElement("div")
+  var artistDiv = document.createElement("div");
+
+  for(let x in data) {
+    if(data[x].name === "Vincent van Gogh") {
+      imgElem.setAttribute("src", "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg");
+
+      imageDiv.setAttribute("class", "image");
+      imageDiv.appendChild(imgElem)
+    
+      nameAnchorTag.setAttribute("href", data[x].wikipedia);
+      nameAnchorTag.innerHTML = data[x].name;
+    
+      
+      nameDiv.setAttribute("class", "name")
+      nameDiv.appendChild(nameAnchorTag)
+    
+      bioDiv.setAttribute("class", "bio")
+      bioDiv.innerHTML = data[x].bio;
+    
+      artistDiv.setAttribute("id", "artist");
+    
+      artistDiv.appendChild(imageDiv)
+      artistDiv.appendChild(nameDiv)
+      artistDiv.appendChild(bioDiv)
+      return artistDiv
+    }
   }
+}
 
+console.log("%cStretch 1:", "color: green");
+console.log(getHTML(artists));
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
